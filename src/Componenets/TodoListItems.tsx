@@ -12,7 +12,6 @@ deleteItem?: DeleteItem
 }
 
 export const ToDoListItems: React.FC<ToDoListItemProps> = (props) =>{
-    //const [todos, setTodos] = React.useState(initialTodo)
     return(
        <li>
            <label >
@@ -21,7 +20,6 @@ export const ToDoListItems: React.FC<ToDoListItemProps> = (props) =>{
                checked ={props.todo?.complete}/>
                {props.todo?.text}
                <button onClick = { ()=> props.deleteItem}>Delete</button>
-
            </label>
 
        </li>
