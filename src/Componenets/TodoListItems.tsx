@@ -5,21 +5,21 @@ import {Todo, ToggleComplete, DeleteItem} from "../type/types"
 import {initialTodo} from '../store/initialTodo'
 
 interface ToDoListItemProps {
-todo?: Todo;
-toggleComplete?:ToggleComplete;
-deleteItem?: DeleteItem
+todo: Todo;
+useToggleComplete:ToggleComplete;
+useDeleteItem?: DeleteItem
 
 }
 
 export const ToDoListItems: React.FC<ToDoListItemProps> = (props) =>{
     return(
        <li>
-           <label >
+           <label className= {props.todo.complete? "Complete": undefined}>
                <input type="checkbox"
-               onChange = {() => props.toggleComplete}
-               checked ={props.todo?.complete}/>
+               onChange = {() => props.useToggleComplete}
+               checked ={props.todo.complete}/>
                {props.todo?.text}
-               <button onClick = { ()=> props.deleteItem}>Delete</button>
+               <button onClick = { ()=> props.useDeleteItem}>Delete</button>
            </label>
 
        </li>
