@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 50px;
+  margin-left: 50px;
+}
+
+.container {
+  display: flex;
+  height: 200px;
+  width: 350px;
+
+  background-color: aliceblue;
+  border: 5px solid black;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.flex-input {
+  display: flex;
+  align-self: flex-end;
+  margin-right: 50px;
+}
+
+.flex-button {
+  background-color: darksalmon;
+  align-self: stretch;
+  margin-right: 50px;
+  margin-left: 40%;
+}
