@@ -52,7 +52,7 @@ function AxiosReducerHook() {
 
 
     return (
-        <PostContext.Provider value= {{state:state, dispatch:dispatch}}>
+        <PostContext.Provider value= {{poststate:state, postdispatch:dispatch}}>
             <div>
             <button>Display</button>
             {state.loading? "chill.. its loading":state.post.title}

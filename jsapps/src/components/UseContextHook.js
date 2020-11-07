@@ -4,12 +4,14 @@ import {PostContext} from './AxiosReducerHook'
 
 
 function UseContextHook() {
-    const {state} = useContext(PostContext)
+    const {poststate, postdispatch} = useContext(PostContext)
     return (
         <div>
-            {state.loading? "chill.. its loading": state.post.title}
+            {poststate.loading? "chill.. its loading": poststate.post.title}
             
-            {state.error? state.error: null}
+            {poststate.error? poststate.error: null}
+         
+            <button>Button</button>
             
         </div>
     )
